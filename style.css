@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Comfortaa', cursive;
+  background: linear-gradient(to bottom right, #fceeff, #f6edff);
+  color: #6a359c;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: #fff9ff;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(248, 190, 255, 0.3);
+  text-align: center;
+  border: 2px dashed #f3c7ff;
+}
+
+h1, .painel-titulo {
+  font-size: 2.2rem;
+  color: #b74acc;
+  position: relative;
+  margin-bottom: 1rem;
+  user-select: none;
+}
+
+h1::before, .painel-titulo::before {
+  content: '✨ ';
+  font-size: 1.5rem;
+}
+
+h2 {
+  color: #d77ee4;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #f3d2fa;
+  border-radius: 20px;
+  background-color: #fff0fb;
+  font-size: 1rem;
+  color: #6a359c;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  transition: 0.3s;
+  box-shadow: inset 0 2px 4px rgba(245, 210, 255, 0.4);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #c28cd9;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #e88efc;
+  box-shadow: 0 0 6px #f6bfff;
+}
+
+button,
+.botao-voltar,
+.botao-editar,
+.botao-sair,
+.btn-navegacao,
+.painel-btn,
+.sentimento-button,
+.voltar,
+.painel-botao,
+.perfil-botao {
+  background-color: #ffeb94;
+  color: #6a359c;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(255, 223, 129, 0.4);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  user-select: none;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+button,
+.botao-voltar,
+.botao-editar,
+.botao-sair,
+.btn-navegacao,
+.painel-btn,
+.sentimento-button,
+.voltar {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+.painel-botao {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.painel-botao:hover,
+.painel-botao:focus,
+button:hover,
+.botao-voltar:hover,
+.botao-editar:hover,
+.botao-sair:hover,
+.btn-navegacao:hover,
+.painel-btn:hover,
+.sentimento-button:hover,
+.voltar:hover,
+.perfil-botao:hover,
+.perfil-botao:focus {
+  background-color: #fff1b8;
+ 
+  outline: none;
+}
+
+.perfil-botao {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  font-size: 1.6rem;
+  padding: 0;
+  border-radius: 50%;
+  background-color: #ffeb94;
+  color: #6a359c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 15px rgba(255, 223, 129, 0.4);
+  text-decoration: none;
+}
+
+.support-card,
+.psicologo-card,
+.nao-esta-sozinho-info,
+.sentimento-resposta,
+.user-info p,
+.conecte-container p {
+  background: #ffeaff;
+  padding: 1.4rem;
+  border-radius: 25px;
+  box-shadow: 0 6px 14px rgba(240, 192, 255, 0.2);
+  border: 1px solid #f8d6ff;
+  transition: 0.2s ease;
+}
+
+.support-card:hover,
+.psicologo-card:hover {
+  transform: scale(1.02);
+}
+
+.support-card img,
+.psicologo-card img {
+  width: 100%;
+  border-radius: 20px;
+  border: 3px solid #f8dcff;
+  margin-bottom: 0.8rem;
+}
+
+.navegacao,
+.botoes-painel,
+.support-cards,
+.nao-esta-sozinho-container,
+.sentimento-container,
+.psicologo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.carinhas {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.sentimento-button {
+  width: 60px;
+  height: 60px;
+  font-size: 1.8rem;
+  padding: 0;
+}
+
+#listaSentimentos li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0.6rem 1rem;
+  background: #fff0fb;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(248, 190, 255, 0.3);
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+}
+
+#listaSentimentos li small {
+  font-size: 0.8rem;
+  color: #a45fba;
+  display: block;
+  margin-top: 4px;
+}
+
+#listaSentimentos li button {
+  background: #ff6b6b;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+#listaSentimentos li button:hover {
+  background: #ff3b3b;
+}
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #b06ac5;
+}
+
+footer a {
+  color: #904ab2;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.painel-header {
+  width: 90%;
+  max-width: 600px;
+  margin: 2rem auto 0 auto;
+  position: relative;
+  height: 60px;
+}
+
+.painel-titulo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: #8b2bbd;
+  margin: 0;
+  user-select: none;
+}
+
+.botoes-container {
+  max-width: 600px;
+  margin: 3rem auto 4rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .painel-header {
+    width: 95%;
+    margin: 1.5rem auto 0 auto;
+    height: 50px;
+  }
+
+  .painel-titulo {
+    font-size: 1.6rem;
+  }
+
+  .botoes-container {
+    max-width: 95%;
+    margin: 2rem auto 3rem auto;
+    gap: 15px;
+  }
+
+  .painel-botao {
+    font-size: 1rem;
+    padding: 14px;
+  }
+
+  .perfil-botao {
+    width: 30px;
+    height: 30px;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0 1rem;
+  }
+
+  .container {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+
+  h1, .painel-titulo {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  input,
+  textarea,
+  button,
+  .painel-botao {
+    font-size: 1rem;
+    padding: 0.9rem;
+  }
+
+  .carinhas {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .sentimento-button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  #listaSentimentos li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #listaSentimentos li button {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
+
+.botoes-acoes {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 400px;
+  margin: 2rem auto 0 auto;
+}
+
+.botoes-acoes .botao-acoes {
+  width: 100%;
+  padding: 1rem 0;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(255, 223, 129, 0.4);
+  border: none;
+  text-align: center;
+  user-select: none;
+  transition: all 0.3s ease;
+  background-color: #ffeb94;
+  color: #6a359c;
+  display: inline-block;
+  text-decoration: none;
+  line-height: normal;
+}
+
+.botoes-acoes .botao-link {
+  display: inline-block;
+}
+
+.botoes-acoes .botao-acoes:hover {
+  background-color: #fff1b8;
+  transform: scale(1.03);
+}
+
+.botoes-acoes .botao-acoes:focus {
+  outline: 2px solid #b07de5;
+  outline-offset: 2px;
+}
